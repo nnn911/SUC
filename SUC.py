@@ -1,10 +1,21 @@
-
 def J2eV(val):
+    # convert Joule to eV
     return val/e
 
 
 def eV2J(val):
+    # convert eV to Joule
     return val*e
+
+
+def eVpA2N(val):
+    # convert eV/A to Newton
+    return val*e*1e10
+
+
+def eVpA32Pa(val):
+    # convert eV/A^3 to Pa (N/m^2)
+    return val*e*1e30
 
 
 # Boltzman constant
