@@ -10,15 +10,24 @@ def eV2J(val):
 
 def eVpA2N(val):
     # convert eV/A to Newton
-    return val*e*1e10
+    return eV2J(val)*1e10
 
 
 def eVpA32Pa(val):
     # convert eV/A^3 to Pa (N/m^2)
-    return val*e*1e30
+    return eV2J(val)*1e30
 
 
-# Boltzman constant
+def kJpMol2eV(val):
+    # convert kJ/mol to eV/at.
+    return J2eV(val*1000)/NA
+
+
+def eV2kJpMol(val):
+    # convert eV/at. to kJ/mol
+    return eV2J(val)/1000*NA
+
+    # Boltzman constant
 k = 1.380649e-23
 
 # Elementary charge
